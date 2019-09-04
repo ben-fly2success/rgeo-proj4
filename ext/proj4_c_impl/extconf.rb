@@ -47,11 +47,15 @@ else
 
   found_proj_ = false
   header_dirs_, lib_dirs_ = dir_config("proj", header_dirs_, lib_dirs_)
+  puts "**** 1"
   if have_header("proj_api.h")
+    puts "**** 2"
     $libs << " -lproj"
     if have_func("pj_init_plus", "proj_api.h")
+      puts "**** 3"
       found_proj_ = true
     else
+      puts "**** 4"
       $libs.gsub!(" -lproj", "")
     end
   end

@@ -2,8 +2,13 @@
   Main initializer for Proj4 wrapper
 */
 
-#define RGEO_PROJ4_SUPPORTED
 #define ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
+
+#ifdef HAVE_PROJ_API_H
+#ifdef HAVE_PJ_INIT_PLUS
+#define RGEO_PROJ4_SUPPORTED
+#endif
+#endif
 
 #ifdef __cplusplus
 #define RGEO_BEGIN_C extern "C" {
