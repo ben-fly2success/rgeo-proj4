@@ -23,7 +23,8 @@ else
       "/opt/proj4/include",
       "/opt/include",
       "/Library/Frameworks/PROJ.framework/unix/include",
-      "/usr/include"
+      "/usr/include",
+      "/usr/local/Cellar/proj/6.2.0/include"
     ]
   lib_dirs_ =
     [
@@ -38,7 +39,8 @@ else
       "/opt/lib",
       "/Library/Frameworks/PROJ.framework/unix/lib",
       "/usr/lib",
-      "/usr/lib64"
+      "/usr/lib64",
+      "/usr/local/Cellar/proj/6.2.0/lib"
     ]
   header_dirs_.delete_if { |path_| !::File.directory?(path_) }
   lib_dirs_.delete_if { |path_| !::File.directory?(path_) }
