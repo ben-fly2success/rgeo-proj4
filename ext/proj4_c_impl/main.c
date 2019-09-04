@@ -3,6 +3,7 @@
 */
 
 #define RGEO_PROJ4_SUPPORTED
+#define ACCEPT_USE_OF_DEPRECATED_PROJ_API_H
 
 #ifdef __cplusplus
 #define RGEO_BEGIN_C extern "C" {
